@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "caseVersion": "1.0.0",
+  "caseId": "case-001",
+  "label": "演示存档（已调查到对照阶段，非正常游戏存档）",
+  "savedAt": 1791016751363,
+  "state": {
+    "caseId": "case-001",
+    "phase": "investigating",
+    "discovered": ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09"],
+    "doubt": { "E09": true },
+    "notes": { "E09": "两处声称先放着，用通行表算时间差。" },
+    "hypothesis": [],
+    "placements": [
+      { "id": "demo-p1", "cardKind": "evidence", "refId": "E08", "lane": "su", "t": 60 },
+      { "id": "demo-p2", "cardKind": "evidence", "refId": "E09", "lane": "su", "t": 210 }
+    ],
+    "selection": ["E09"],
+    "cursorT": 240,
+    "filter": { "person": "su", "kind": null },
+    "mapMode": "history",
+    "hintLevel": 0,
+    "tutorialStep": -1,
+    "prefs": { "sound": false, "motion": true },
+    "startedAt": 1791016751363,
+    "solvedAt": null,
+    "lastVerdict": null,
+    "hotspotOpen": null,
+    "askOpen": null,
+    "placedOnce": true
+  }
+}

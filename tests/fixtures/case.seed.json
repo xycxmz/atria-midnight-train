@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "caseVersion": "1.0-design",
+  "timeOrigin": "23:56:00",
+  "durationSeconds": 360,
+  "locations": ["S", "D", "L"],
+  "edges": [
+    {"from": "S", "to": "D", "seconds": 75},
+    {"from": "D", "to": "L", "seconds": 75}
+  ],
+  "people": [
+    {"id": "lin", "name": "林澈"},
+    {"id": "su", "name": "苏砚"},
+    {"id": "zhou", "name": "周岚"},
+    {"id": "he", "name": "何川"}
+  ],
+  "event": {"location": "L", "t": 150, "actor": "su"},
+  "objectiveAnchors": [
+    {"person": "lin", "location": "S", "t": 135, "evidence": "E04"},
+    {"person": "zhou", "location": "D", "t": 135, "evidence": "E05"},
+    {"person": "zhou", "location": "D", "t": 165, "evidence": "E05"},
+    {"person": "he", "location": "D", "t": 175, "evidence": "E06"},
+    {"person": "su", "location": "L", "t": 60, "evidence": "E08"},
+    {"person": "su", "location": "D", "t": 270, "evidence": "E08"}
+  ],
+  "witnessAnchors": [
+    {"person": "su", "location": "D", "t": 255, "evidence": "E10"}
+  ],
+  "testimonyToCompare": [
+    {"person": "su", "location": "L", "t": 210, "evidence": "E09"},
+    {"person": "su", "location": "D", "t": 240, "evidence": "E09"}
+  ],
+  "keyCustody": {"key": "K2", "person": "su", "fromT": 60, "toT": 270},
+  "authorRoute": [
+    {"person": "su", "from": "L", "to": "D", "departT": 170, "arriveT": 245},
+    {"person": "he", "from": "L", "to": "D", "departT": 60, "arriveT": 135},
+    {"person": "he", "from": "D", "to": "L", "departT": 270, "arriveT": 345}
+  ],
+  "evidenceIds": ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10", "E11", "E12"],
+  "verdict": {
+    "actor": "su",
+    "eventT": 150,
+    "eventLocation": "L",
+    "stash": "D-service-compartment",
+    "requiredGroups": [
+      ["E01", "E02", "E07"],
+      ["E03", "E04", "E05", "E06", "E08"],
+      ["E03", "E09"],
+      ["E01", "E11", "E12"]
+    ],
+    "optionalEvidence": ["E10"]
+  },
+  "expected": {
+    "feasiblePeople": ["su"],
+    "claimTravelSeconds": 75,
+    "claimAvailableSeconds": 30,
+    "claimShortfallSeconds": 45
+  }
+}

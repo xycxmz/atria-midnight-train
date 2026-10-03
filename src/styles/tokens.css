@@ -1,0 +1,49 @@
+:root {
+  /* 纸质调查档案与铁路图表配色；颜色不是唯一线索，形状与文字标签同层表达 */
+  --paper: #f4efe3;
+  --paper-deep: #ece5d3;
+  --paper-card: #fbf8ef;
+  --ink: #242b31;
+  --ink-soft: #4a5259;
+  --ink-faint: #6d757c;
+  --structure: #cbd0c9;
+  --structure-strong: #9aa39b;
+  --confirmed: #236f6a;
+  --confirmed-soft: #dceae6;
+  --testimony: #9a6124;
+  --testimony-ink: #7a4a14;
+  --testimony-soft: #f0e3cf;
+  --contradiction: #a63a36;
+  --contradiction-soft: #f0d9d6;
+  --hypothesis: #5b5fc7;
+  --hypothesis-soft: #e3e4f5;
+
+  --font-body: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans CJK SC", "Source Han Sans SC", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, "Courier New", monospace;
+
+  --text-base: 16px;
+  --text-small: 14px;
+  --text-label: 13px;
+  --touch: 44px;
+
+  --radius: 8px;
+  --radius-small: 5px;
+  --shadow-card: 0 1px 2px rgba(36, 43, 49, 0.08), 0 2px 8px rgba(36, 43, 49, 0.06);
+  --shadow-pop: 0 6px 24px rgba(36, 43, 49, 0.18);
+  --border: 1px solid var(--structure);
+  --border-strong: 2px solid var(--structure-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
